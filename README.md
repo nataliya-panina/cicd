@@ -21,8 +21,8 @@
     Проверьте доступность хостов с помощью модуля ping.
 
 ## Решение
-sudo apt install ansible -y
-ansible --version
+    sudo apt install ansible -y
+    ansible --version
 
 
 ## Задание 3
