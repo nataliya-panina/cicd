@@ -21,9 +21,12 @@
     Проверьте доступность хостов с помощью модуля ping.
 
 ## Решение
-    sudo apt install ansible -y
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python3 get-pip.py --user
+    python3 -m pip install --user ansible
     ansible --version
-
+    $ ansible-config init --disabled -t all > ansible.cfg
+    
 
 ## Задание 3
 
@@ -33,7 +36,7 @@
 
 ## Решение
     Параметр forks определяет максимальное количество хостов, на которых текущая задача выполняется одновременно.
-    Параметр serial 
+    Параметр serial определяет количество нод, на которых плейбук запускается одновременно
 
 ## Задание 4
 
