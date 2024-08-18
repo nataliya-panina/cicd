@@ -35,10 +35,14 @@
     
     ansible --version
     $ ansible-config init --disabled -t all > ansible.cfg
-    
+
+Файлы конфигурации:
 ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
+![ansible.cfg](https://github.com/nataliya-panina/cicd/blob/main/ansible.cfg)
+Снимки с экрана:
 ![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ping.png)
 ![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_venv.png)    
+
 ## Задание 3
 
 Ответьте на вопрос в свободной форме.
