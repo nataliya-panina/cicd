@@ -39,9 +39,11 @@
 Файлы конфигурации:
 1. ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
 2. ![ansible.cfg](https://github.com/nataliya-panina/cicd/blob/main/ansible.cfg)
+
 Снимки с экрана:
-- ![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ping.png)
-- ![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_venv.png)    
+
+![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ping.png)
+![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_venv.png)    
 
 ## Задание 3
 
