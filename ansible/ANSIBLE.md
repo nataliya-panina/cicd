@@ -26,7 +26,8 @@
     python3 get-pip.py --user
     python3 -m pip install --user ansible
 
-Но я устанавливала так же, как в лекции:
+Но я устанавливала так же, как в лекции:  
+
     python3 -m venv ansible_venv
     source ansible_venv/bin/activate
     pip3 install ansible
