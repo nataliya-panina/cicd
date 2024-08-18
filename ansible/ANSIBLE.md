@@ -36,7 +36,7 @@
     
 ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
 ![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ping.png)
-![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ansible_venv.png)    
+![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_venv.png)    
 ## Задание 3
 
 Ответьте на вопрос в свободной форме.
