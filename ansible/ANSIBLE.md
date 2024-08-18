@@ -25,13 +25,18 @@
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python3 get-pip.py --user
     python3 -m pip install --user ansible
+
+Но я устанавливала так же, как в лекции:
+    python3 -m venv ansible_venv
+    source ansible_venv/bin/activate
+    pip3 install ansible
     
     ansible --version
     $ ansible-config init --disabled -t all > ansible.cfg
     
 ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
 ![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ping.png)
-    
+![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ansible_venv.png)    
 ## Задание 3
 
 Ответьте на вопрос в свободной форме.
