@@ -27,7 +27,8 @@
     ansible --version
     $ ansible-config init --disabled -t all > ansible.cfg
     
-
+![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
+![]()
 ## Задание 3
 
 Ответьте на вопрос в свободной форме.
