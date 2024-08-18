@@ -29,9 +29,8 @@
     ansible --version
     $ ansible-config init --disabled -t all > ansible.cfg
     
-    
 ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
-![Ошибка]()
+![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ping.png)
     
 ## Задание 3
 
