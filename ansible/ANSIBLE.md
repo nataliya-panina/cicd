@@ -21,7 +21,8 @@
     Проверьте доступность хостов с помощью модуля ping.
 
 ## Решение
-    ![Инструкция по установке](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+![Инструкция по установке](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+    
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python3 get-pip.py --user
     python3 -m pip install --user ansible
