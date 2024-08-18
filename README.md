@@ -21,14 +21,18 @@
     Проверьте доступность хостов с помощью модуля ping.
 
 ## Решение
+    ![Инструкция по установке](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python3 get-pip.py --user
     python3 -m pip install --user ansible
+    
     ansible --version
     $ ansible-config init --disabled -t all > ansible.cfg
     
+    
 ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
-![]()
+![Ошибка]()
+    
 ## Задание 3
 
 Ответьте на вопрос в свободной форме.
