@@ -22,19 +22,14 @@
 
 ## Решение
 ![Инструкция по установке](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-    
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    python3 get-pip.py --user
-    python3 -m pip install --user ansible
-
-Но я устанавливала так же, как в лекции:  
-
+    sudo apt update
+    sudo apt install python3-pip python3-venv -y
+    python3 --version
     python3 -m venv ansible_venv
     source ansible_venv/bin/activate
     pip3 install ansible
-    
     ansible --version
-    $ ansible-config init --disabled -t all > ansible.cfg
+    ansible-config init --disabled -t all > ansible.cfg
 
 Файлы конфигурации:
 1. ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
