@@ -21,6 +21,9 @@
     Проверьте доступность хостов с помощью модуля ping.
 
 ## Решение
+
+Я использую виртуальные машины в Яндекс облаке.
+
 ![Инструкция по установке](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
  
     sudo apt update  
