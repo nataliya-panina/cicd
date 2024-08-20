@@ -35,6 +35,10 @@
     ansible --version
     ansible-config init --disabled -t all > ansible.cfg
 
+    Генерирую пару ключей на ansible для управляемых хостов:  
+    ssh-keygen -t ed25519
+    
+
 Файлы конфигурации:
 1. ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
 2. ![ansible.cfg](https://github.com/nataliya-panina/cicd/blob/main/ansible.cfg)
