@@ -126,7 +126,7 @@ output "external_ip_address_vm_1" {
 
 Дополнительные материалы:
 
-    ![Nginx. Руководство для начинающих.](https://nginx.org/ru/docs/beginners_guide.html)
-    ![Руководство по Terraform.](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/doc)
-    ![Ansible User Guide.](https://docs.ansible.com/ansible/latest/user_guide/index.html)
-    ![Terraform Documentation.](https://www.terraform.io/docs/index.html)
+![Nginx. Руководство для начинающих.](https://nginx.org/ru/docs/beginners_guide.html)  
+![Руководство по Terraform.](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/doc)  
+![Ansible User Guide.](https://docs.ansible.com/ansible/latest/user_guide/index.html)  
+![Terraform Documentation.](https://www.terraform.io/docs/index.html)  
