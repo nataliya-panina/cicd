@@ -71,3 +71,8 @@
     
 ## Решение
 
+    ansible all -m command -a "sudo apt install nginx -y" -i hosts.yml
+    ansible all -m command -a "sudo systemctl enable --now nginx" -i hosts.yml
+    ansible all -m command -a "echo 'I Like Linux' > /tmp/netology.txt" -i hosts.yml
+
+![image](https://github.com/user-attachments/assets/94695a01-90e1-46ee-a673-7753495fa778)
