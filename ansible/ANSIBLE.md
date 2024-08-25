@@ -47,8 +47,7 @@
 
 Снимки с экрана:
 
-![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_ping.png)
-![Ошибка](https://github.com/nataliya-panina/cicd/blob/main/img/failure_venv.png)    
+![Ansible_ping](https://github.com/nataliya-panina/cicd/blob/main/img/ansible_ping1.png)
 
 ## Задание 3
 
