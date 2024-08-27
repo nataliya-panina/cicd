@@ -52,9 +52,9 @@
 
 ## Решение
 
-cd /usr/local/src && git clone https://github.com/hashicorp/terraform.git
+    cd /usr/local/src && git clone https://github.com/hashicorp/terraform.git
 
-![Installed]()
+![Installed](https://github.com/nataliya-panina/cicd/blob/main/Terraform/Terraform_installed.png)
 
 # Дополнительные задания* (со звёздочкой)
 
