@@ -54,3 +54,9 @@ resource "yandex_compute_instance" "vm-1" {
   scheduling_policy {
     preemptible = true
   }
+
+  metadata = {
+    user-data = "${file("./meta.txt")}"
+  }
+
+}
