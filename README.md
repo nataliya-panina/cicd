@@ -4,6 +4,6 @@
 3. ![Домашнее задание к занятию «Подъём инфраструктуры в Yandex Cloud»](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/README.md)
 4. ![Домашнее задание к занятию «Что такое DevOps. СI/СD»](https://github.com/nataliya-panina/cicd/blob/main/devops/README.md)
 5. ![GIT](https://github.com/nataliya-panina/git-hw) 
-
+6. ![Домашнее задание к занятию "GitLab"](https://github.com/nataliya-panina/cicd/blob/main/gitlab/README.md)
 
 ![netology-homeworks](https://github.com/netology-code/sdvps-homeworks/blob/main/README.md)
