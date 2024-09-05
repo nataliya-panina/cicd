@@ -116,6 +116,8 @@ output "external_ip_address_vm_1" {
 
 ![outputs.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/outputs.tf)  
 
+В файле
+![meta.txt](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/meta.txt) указываю параметры соединения: имя пользователя, ключ ssh.
 
 Инициализация terraform:  
 
