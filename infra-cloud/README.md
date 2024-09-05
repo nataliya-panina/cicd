@@ -131,7 +131,7 @@ output "external_ip_address_vm_1" {
 
     terraform apply
 
-![Uploading image.png…]()
+![Image](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/terraform_ouptut.png)
 
 ## Задание 2*
 
