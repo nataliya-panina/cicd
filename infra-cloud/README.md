@@ -107,9 +107,16 @@ output "external_ip_address_vm_1" {
 ```
 Провести тестирование.
 ## Решение
+В файле main.tf описываю заданную конфигурацию виртуальной машины:
+![main.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/main.tf) 
+инициализация terraform:  
+    terraform init
+Предпросмотр:
+    terraform plan
+Создание инфраструктуры, описанной в файлах конфигурации:
+    terraform apply
 
-
-![main.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/main.tf)  
+В файле outputs.tf описываются переменные, которые нужно вывести после успешного создания инфраструктуры.
 ![outputs.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/outputs.tf)  
 
 
