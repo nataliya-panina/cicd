@@ -112,18 +112,18 @@ output "external_ip_address_vm_1" {
 
 ![main.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/main.tf) 
 
-В файле outputs.tf описываются переменные, которые нужно вывести после успешного создания инфраструктуры.  
+В файле ![variables.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/variables.tf) описываются переменные и их значения по умолчанию.
 
-![outputs.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/outputs.tf)  
+В файле ![meta.txt](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/meta.txt) указываю параметры соединения: имя пользователя, группу sudo, в которую он должен входить, его командную оболочку, ключ ssh.  
 
-В файле
-![meta.txt](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/meta.txt) указываю параметры соединения: имя пользователя, ключ ssh.
+В файле ![outputs.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/outputs.tf) описываются переменные, которые нужно вывести после успешного создания инфраструктуры.  
+
 
 Инициализация terraform:  
 
     terraform init
 
-Предпросмотр:  
+После инициализации можно посмотреть конфигурацию, которая будет создана после применения :  
 
     terraform plan
 
