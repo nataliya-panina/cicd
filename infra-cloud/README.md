@@ -107,23 +107,12 @@ output "external_ip_address_vm_1" {
 ```
 Провести тестирование.
 ## Решение
-  nano main.tf
-```
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
-    }
-  }
-}
 
-provider "yandex" {
-  token = "yxxxw"
-  cloud_id = "b1g1o5qivg8qirtj8723"
-  folder_id = "b1ghpsbumf7efm6d0s33"
-  zone = "ru-central1-a"
-}
-```
+
+![main.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/main.tf)  
+![outputs.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/outputs.tf)  
+
+
 ## Задание 2*
 
 Выполните действия, приложите скриншот скриптов, скриншот выполненного проекта.
