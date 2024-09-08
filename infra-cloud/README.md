@@ -131,10 +131,10 @@ output "external_ip_address_vm_1" {
 
     terraform apply
 
-После создания инфраструктуры ```terraform output``` и полученний IP указываю в качестве хоста в файле hosts.
-  hosts
+После создания инфраструктуры ```terraform output``` и полученний IP указываю в качестве хоста в файле hosts.  
 
 ```
+#hosts
 [yc:vars]
 ansible_connection=ssh
 ansible_user=user
