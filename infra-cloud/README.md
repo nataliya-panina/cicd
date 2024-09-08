@@ -139,7 +139,7 @@ output "external_ip_address_vm_1" {
   hosts: "all"
   become: yes
   become_method: "sudo"
-  become_user: "user"
+  become_user: "root"
   remote_user: "user"
 
   tasks:
