@@ -131,7 +131,38 @@ output "external_ip_address_vm_1" {
 
     terraform apply
 
-![Image](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/terraform_ouptut.png)
+
+```
+#Playbook install nginx
+---
+- name: "Install Nginx"
+  hosts: "all"
+  become: yes
+  become_method: "sudo"
+  become_user: "user"
+  remote_user: "user"
+
+  tasks:
+    - name: "Install Nginx"
+      ansible.builtin.apt:
+        name: "nginx"
+        state: "latest"
+        update_cache: true
+
+    - name: "Copy config file"
+      copy:
+        src: '{/var/www/html/index.nginx-debian.html}'
+        dest: '{/var/www/html/index.nginx-debian.html}'
+
+    - name: "nginx systemd"
+      systemd:
+        name: "nginx"
+        enabled: yes
+        state: "started"
+...
+```
+![image](https://github.com/user-attachments/assets/7250f7de-367c-40c2-88bf-1af0dbe3fb90)
+
 
 ## Задание 2*
 
