@@ -131,6 +131,7 @@ output "external_ip_address_vm_1" {
 
     terraform apply
 
+После создания инфраструктуры ```terraform output``` и полученний IP указываю в качестве хоста в файле hosts.
 
 ```
 #Playbook install nginx
@@ -161,8 +162,32 @@ output "external_ip_address_vm_1" {
         state: "started"
 ...
 ```
+
+    ansible-playbook install_nginx.yml -i hosts
+
 ![image](https://github.com/user-attachments/assets/7250f7de-367c-40c2-88bf-1af0dbe3fb90)
 
+```
+terraform show:
+```
+
+```
+...
+    metadata                  = {
+        "user-data" = <<-EOT
+            #cloud-config
+            users:
+              - name: user
+                groups: sudo
+                shell: /bin/bash
+                sudo: ['ALL=(ALL:ALL) NOPASSWD:ALL']
+                ssh-authorized-keys:
+                  - ssh-rsa ***
+                  - ssh-ed25519 ***
+        EOT
+    }
+...
+```
 
 ## Задание 2*
 
