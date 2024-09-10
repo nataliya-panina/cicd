@@ -170,11 +170,59 @@ terraform apply
 
 Создание двух одинаковых ВМ:  
 
+![image](https://github.com/user-attachments/assets/19e4e64a-3d19-4ef8-ae90-85f2a82c3042)
 
-Плейбук для установки базы данных на одну из виртуальных машин:
+Плейбук для установки базы данных на одну из виртуальных машин:  
 
+```
+#Playbook Install MySQL
+---
+- hosts: db
+  become: yes
+  become_method: "sudo"
+  become_user: "root"
+  remote_user: "user"
 
+- tasks:
+  - name: "install mysql"
+    apt:
+      name: "mysql"
+      update_cache: yes
+      cache_valid_time: 3600
+      state: "present"
 
+  - name: "start up the mysql service"
+    shell: "service mysql start"
+
+  - name: "ensure mysql is enabled to run on startup"
+    service:
+      name: "mysql"
+      state: "started"
+      enabled: true
+
+  - name: "update mysql root password for all root accounts"
+    mysql_user:
+      name: "user"
+      host: "{{ item }}"
+      password: "password"
+#      login_user: "root"
+#      login_password: "{{ mysql_root_password }}"
+      check_implicit_admin: yes
+      priv: "*.*:ALL,GRANT"
+      with_items:
+        - "{{ ansible_hostname }}"
+        - 127.0.0.1
+        - localhost
+        - 89.169.156.109
+
+  - name: "create a new database"
+    mysql_db:
+      name: "testdb"
+      state: "present"
+      login_user: "user"
+      login_password: "password"
+```
+... Ищу ошибки...
 
 ## Задание 3*
 
