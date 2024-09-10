@@ -206,7 +206,7 @@ terraform show:
     }
 ...
 ```
-ЗЫ: Для того, чтобы сработал ansible-playbook без ввода пароля - изменила  image_id = "fd8o6khjbdv3f1suqf69". 
+ЗЫ: Для того, чтобы сработал ansible-playbook без ввода пароля - изменила  image_id = "fd8o6khjbdv3f1suqf69". (В дискорде посоветовали).
 
 
 ## Задание 2*
