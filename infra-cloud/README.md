@@ -14,9 +14,9 @@
 
 ## Решение
 
-В файле main.tf описываю заданную конфигурацию виртуальной машины:  
+В файле ![main.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/main.tf) описываю заданную конфигурацию виртуальной машины:  
 
-![main.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/main.tf) 
+ 
 
 В файле ![variables.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/variables.tf) описываются переменные и их значения по умолчанию. В том числе токен, который вводится вручную при запуске terraform на выполнение.
 
