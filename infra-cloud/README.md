@@ -132,6 +132,7 @@ terraform show:
 Изменения в файле main.tf:
 
 ```
+...
 resource "yandex_compute_instance" "vm" {
   count = 2
 
@@ -146,6 +147,7 @@ resource "yandex_compute_instance" "vm" {
       image_id = "fd8o6khjbdv3f1suqf69"
     }
   }
+...
 ```
 Применение изменений:
 
