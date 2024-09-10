@@ -41,7 +41,7 @@ resource "yandex_compute_instance" "vm-1" {
 
   boot_disk {
     initialize_params {
-      image_id = "fd8e39esofgaddnc174k"
+      image_id = "fd8o6khjbdv3f1suqf69"
     }
   }
 
@@ -56,7 +56,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   metadata = {
-    user-data = "${file("./meta.txt")}"
+   user-data = "${file("./meta.txt")}"
   }
 
 }
