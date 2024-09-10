@@ -18,7 +18,7 @@
 
 ![main.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/main.tf) 
 
-В файле ![variables.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/variables.tf) описываются переменные и их значения по умолчанию.
+В файле ![variables.tf](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/variables.tf) описываются переменные и их значения по умолчанию. В том числе токен, который вводится вручную при запуске terraform на выполнение.
 
 В файле ![meta.txt](https://github.com/nataliya-panina/cicd/blob/main/infra-cloud/meta.txt) указываю параметры соединения: имя пользователя, группу sudo, в которую он должен входить, его командную оболочку, ключ ssh.  
 
