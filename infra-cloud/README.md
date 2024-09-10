@@ -143,7 +143,9 @@ ansible_ssh_private_key_file=/home/moi/.ssh/id_ed25519
 [yc]
 <Внешний IP ВМ>
 ```
-  
+
+Плейбук для установки, конфигурации и запуска nginx:  
+
 ```
 #Playbook install nginx
 ---
@@ -163,8 +165,9 @@ ansible_ssh_private_key_file=/home/moi/.ssh/id_ed25519
 
     - name: "Copy config file"
       copy:
-        src: '{/var/www/html/index.nginx-debian.html}'
-        dest: '{/var/www/html/index.nginx-debian.html}'
+        src: /var/www/html/index.nginx-debian.html
+        dest: /var/www/html/index.nginx-debian.html
+        remote_src: no
 
     - name: "nginx systemd"
       systemd:
@@ -176,7 +179,11 @@ ansible_ssh_private_key_file=/home/moi/.ssh/id_ed25519
 
     ansible-playbook install_nginx.yml -i hosts
 
-![image](https://github.com/user-attachments/assets/7250f7de-367c-40c2-88bf-1af0dbe3fb90)
+![image](https://github.com/user-attachments/assets/96eafdfd-9d59-47f4-b81b-882d2c6bcf94)
+
+
+![image](https://github.com/user-attachments/assets/157fa885-6820-44b2-94e3-0f5095d70f7a)
+
 
 ```
 terraform show:
@@ -199,10 +206,8 @@ terraform show:
     }
 ...
 ```
+ЗЫ: Для того, чтобы сработал ansible-playbook без ввода пароля - изменила  image_id = "fd8o6khjbdv3f1suqf69". 
 
-Я правильно понимаю, что в файле мета создается пользователь в группе судо и для повышения его привилегий пароль не нужен?.
-Я могу подключится по ssh, пользователь находится в группе sudo, но при попытке установить что-нибудь - запрашивается пароль рута.
-Где и что нужно изменить чтобы пароль не запрашивался?
 
 ## Задание 2*
 
