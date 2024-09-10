@@ -186,6 +186,13 @@ terraform apply
     Для того чтобы вам не нужно было каждый раз выполнять export - добавьте данную команду в самый конец файла ~/.bashrc
 ## Решение
 
+![image](https://github.com/user-attachments/assets/78a4aae1-6a79-4029-bed6-0a413c8646eb)
+
+```
+export YC_TOKEN=$(yc iam create-token)
+```
+![image](https://github.com/user-attachments/assets/c3ed85c6-f694-4819-a706-0639f67ff8dd)
+
 
 Дополнительные материалы:
 
