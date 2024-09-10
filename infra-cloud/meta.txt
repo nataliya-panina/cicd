@@ -3,7 +3,7 @@ users:
   - name: user
     groups: sudo
     shell: /bin/bash
-    sudo: ['ALL=(ALL:ALL) NOPASSWD:ALL']
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
       - ssh-rsa AAA******
       - ssh-ed25519 *******
