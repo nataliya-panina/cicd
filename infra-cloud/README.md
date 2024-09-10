@@ -177,7 +177,11 @@ ansible_ssh_private_key_file=/home/moi/.ssh/id_ed25519
 ...
 ```
 
+Запуск плейбука на выполнение:
+
     ansible-playbook install_nginx.yml -i hosts
+
+Результат:
 
 ![image](https://github.com/user-attachments/assets/96eafdfd-9d59-47f4-b81b-882d2c6bcf94)
 
@@ -198,7 +202,7 @@ terraform show:
               - name: user
                 groups: sudo
                 shell: /bin/bash
-                sudo: ['ALL=(ALL:ALL) NOPASSWD:ALL']
+                sudo: ['ALL=(ALL) NOPASSWD:ALL']
                 ssh-authorized-keys:
                   - ssh-rsa ***
                   - ssh-ed25519 ***
