@@ -126,7 +126,36 @@ terraform show:
     Перестроить инфраструктуру и добавить в неё вторую виртуальную машину.
     Установить на вторую виртуальную машину базу данных.
     Выполнить проверку состояния запущенных служб через Ansible.
+    
 ## Решение
+
+Изменения в файле main.tf:
+
+```
+resource "yandex_compute_instance" "vm" {
+  count = 2
+
+  resources {
+    cores  = 2
+    memory = 2
+    core_fraction = 20
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id = "fd8o6khjbdv3f1suqf69"
+    }
+  }
+```
+Применение изменений:
+
+```
+terraform apply
+```
+
+Создание двух одинаковых ВМ:  
+
+![image](https://github.com/user-attachments/assets/0614a8ab-c1eb-4c55-a4f7-93e86bb7913d)
 
 
 ## Задание 3*
