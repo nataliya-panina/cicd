@@ -94,28 +94,6 @@ ansible_ssh_private_key_file=/home/moi/.ssh/id_ed25519
 
 ![image](https://github.com/user-attachments/assets/157fa885-6820-44b2-94e3-0f5095d70f7a)
 
-
-```
-terraform show:
-```
-
-```
-...
-    metadata                  = {
-        "user-data" = <<-EOT
-            #cloud-config
-            users:
-              - name: user
-                groups: sudo
-                shell: /bin/bash
-                sudo: ['ALL=(ALL) NOPASSWD:ALL']
-                ssh-authorized-keys:
-                  - ssh-rsa ***
-                  - ssh-ed25519 ***
-        EOT
-    }
-...
-```
 ЗЫ: Для того, чтобы сработал ansible-playbook без ввода пароля - изменила  image_id = "fd8o6khjbdv3f1suqf69". (В дискорде посоветовали).
 
 
