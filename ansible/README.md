@@ -42,8 +42,8 @@
     
 
 Файлы конфигурации:
-1. ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/hosts.yml)
-2. ![ansible.cfg](https://github.com/nataliya-panina/cicd/blob/main/ansible.cfg)
+1. ![hosts.yml](https://github.com/nataliya-panina/cicd/blob/main/ansible/hosts.yml)
+2. ![ansible.cfg](https://github.com/nataliya-panina/cicd/blob/main/ansible/ansible.cfg)
 
 Снимки с экрана:
 
