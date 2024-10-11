@@ -12,6 +12,31 @@
 -  Установить пакет tuned из стандартного репозитория вашей ОС. Запустить его, как демон — конфигурационный файл systemd появится автоматически при установке. Добавить tuned в автозагрузку.  
 -  Изменить приветствие системы (motd) при входе на любое другое. Пожалуйста, в этом задании используйте переменную для задания приветствия. Переменную можно задавать любым удобным способом.  
 
+## Решение
+1. Плейбук, который создаёт директорию в /tmp и распаковывает туда скачанный архивный файл:
+---
+- name: Get_archive
+  hosts: yc
+  tasks:
+    - name: create_directory_kafka
+      file:
+        state: directory
+        path: /tmp/kafka
+        mode: "755"
+    - name: download_unarchive_kafka
+      ansible.builtin.unarchive:
+        src: https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
+        dest: /tmp/kafka
+        remote_src: yes
+    - name: listing_destination_directory
+      shell: "ls /tmp/kafka"
+...
+
+![image](https://github.com/user-attachments/assets/05262ecb-ed45-4452-ab94-175cd39d0934)
+
+
+2. 
+
 ## Задание 2
 
 Выполните действия, приложите файлы с модифицированным плейбуком и вывод выполнения.
