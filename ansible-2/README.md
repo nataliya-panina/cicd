@@ -13,7 +13,32 @@
 -  Изменить приветствие системы (motd) при входе на любое другое. Пожалуйста, в этом задании используйте переменную для задания приветствия. Переменную можно задавать любым удобным способом.  
 
 ## Решение
-1. Плейбук, который создаёт директорию в /tmp и распаковывает туда скачанный архивный файл:
+Файл ansible.cfg:
+```
+[inventory]
+inventory = "./hosts"
+
+[defaults]
+remote_user = moi
+ansible_ssh_private_key_file: /home/moi/.ssh/id_ed25519
+
+[privilege_escalation]
+become = True
+become_user = root
+become_method = sudo
+```
+
+Файл inventory:
+
+```
+[servers]
+192.168.115.129
+[yc]
+89.169.150.202
+
+```
+1. Плейбук, который создаёт директорию в /tmp и распаковывает туда скачанный архивный файл
+```
 ---
 - name: Get_archive
   hosts: yc
@@ -31,6 +56,7 @@
     - name: listing_destination_directory
       shell: "ls /tmp/kafka"
 ...
+```
 
 ![image](https://github.com/user-attachments/assets/05262ecb-ed45-4452-ab94-175cd39d0934)
 
