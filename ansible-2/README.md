@@ -15,12 +15,10 @@
 ## Решение
 Файл ansible.cfg:
 ```
-[inventory]
-inventory = "./hosts"
-
 [defaults]
 remote_user = moi
 ansible_ssh_private_key_file: /home/moi/.ssh/id_ed25519
+inventory = "./hosts"
 
 [privilege_escalation]
 become = True
@@ -28,15 +26,6 @@ become_user = root
 become_method = sudo
 ```
 
-Файл inventory:
-
-```
-[servers]
-192.168.115.129
-[yc]
-89.169.150.202
-
-```
 1. Плейбук, который создаёт директорию в /tmp и распаковывает туда скачанный архивный файл
 ```
 ---
@@ -58,16 +47,46 @@ become_method = sudo
 ...
 ```
 
-![image](https://github.com/user-attachments/assets/05262ecb-ed45-4452-ab94-175cd39d0934)
+![image](https://github.com/user-attachments/assets/8e9e30b9-7b1f-4291-87a0-86d10c13ed98)
 
 
-2. 
+2. Плейбук для сервиса tuned:
+
+```
+---
+- name: Install and start service tuned
+  hosts: yc
+  tasks:
+    - name: install_tuned
+      apt:
+        name: tuned
+        state: latest
+        update_cache: yes
+    - name: start_service_tuned
+      service:
+        name: tuned
+        state: started
+        enabled: true
+...
+```
+![image](https://github.com/user-attachments/assets/a9fc6ce8-96a7-4f2d-8e75-397fd26115ec)
+
+
+3. MOTD
+
+```
+
+```
 
 ## Задание 2
 
 Выполните действия, приложите файлы с модифицированным плейбуком и вывод выполнения.
 
 Модифицируйте плейбук из пункта 3, задания 1. В качестве приветствия он должен установить IP-адрес и hostname управляемого хоста, пожелание хорошего дня системному администратору.  
+
+## Решение
+
+
 
 ## Задание 3
 
@@ -88,4 +107,6 @@ become_method = sudo
 - разместите архив созданной роли у себя на Google диске и приложите ссылку на роль в своём решении;
 - предоставьте скриншоты выполнения плейбука;
 - предоставьте скриншот браузера, отображающего сконфигурированный index.html в качестве сайта.
+## Решение
+
 
