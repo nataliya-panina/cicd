@@ -42,8 +42,12 @@ become_method = sudo
         src: https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
         dest: /tmp/kafka
         remote_src: yes
-    - name: listing_destination_directory
-      shell: "ls /tmp/kafka"
+    - name: list_destination_directory
+      shell: ls /tmp/kafka
+      register: results
+
+    - debug:
+        var: results.stdout
 ...
 ```
 
