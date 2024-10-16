@@ -29,25 +29,26 @@ become_method = sudo
 1. Плейбук, который создаёт директорию в /tmp и распаковывает туда скачанный архивный файл
 ```
 ---
-- name: Get_archive
+- name: download and unarchive kafka
   hosts: yc
   tasks:
-    - name: create_directory_kafka
-      file:
-        state: directory
-        path: /tmp/kafka
-        mode: "755"
-    - name: download_unarchive_kafka
-      ansible.builtin.unarchive:
-        src: https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
-        dest: /tmp/kafka
-        remote_src: yes
-    - name: list_destination_directory
-      shell: ls /tmp/kafka
-      register: results
+  - name: create_directory_kafka
+    file:
+      path: /tmp/kafka
+      state: directory
+      mode: 0755
+  - name: download_unarchive_kafka
+    unarchive:
+      src: https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
+      dest: /tmp/kafka
+      remote_src: yes
 
-    - debug:
-        var: results.stdout
+  - name: list_destination_directory
+    shell: ls /tmp/kafka
+    register: results
+
+  - debug:
+      var: results.stdout
 ...
 ```
 
