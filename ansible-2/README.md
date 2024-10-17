@@ -80,8 +80,22 @@ become_method = sudo
 3. MOTD
 
 ```
+- name: change_motd
+  hosts: yc
+  tasks:
+  - name: disable default motd
+    file:
+      path: /etc/update-motd.d/
+      state: directory
+      recurse: yes
+      mode: 644
 
+  - name: new message
+    shell: echo Hello $USER > /etc/motd
 ```
+
+![image](https://github.com/user-attachments/assets/a96e90e3-71a8-47f1-8f11-69ce511f13fa)
+
 
 ## Задание 2
 
