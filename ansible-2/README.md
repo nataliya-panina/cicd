@@ -149,7 +149,7 @@ become_method = sudo
 - предоставьте скриншот браузера, отображающего сконфигурированный index.html в качестве сайта.
 ## Решение
 
-
+https://github.com/nataliya-panina/cicd/tree/main/ansible-2/roles/deploy_apache
 
 ![image](https://github.com/user-attachments/assets/d1f412c1-2baa-4114-97ce-2bf6a5d92993)
 
