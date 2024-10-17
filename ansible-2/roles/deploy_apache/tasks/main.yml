@@ -1,0 +1,29 @@
+---
+# tasks file for deploy_apache
+- name: install apache
+  apt:
+    name: apache2
+    state: latest
+    update_cache: yes
+
+- name: copy index file
+  template:
+    src: ./roles/deploy_apache/templates/index.j2
+    dest: /var/www/html/index.html
+    mode: 0755
+  notify: Restart apache
+
+- name: Start apache
+  service:
+    name: apache2
+    state: started
+    enabled: yes
+
+- name: Check site availability
+  uri:
+    url: http://{{ ansible_host }}
+    method: GET
+  register: result
+
+- debug:
+    var: result.status
