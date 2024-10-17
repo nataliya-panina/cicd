@@ -77,7 +77,7 @@ become_method = sudo
 ![image](https://github.com/user-attachments/assets/a9fc6ce8-96a7-4f2d-8e75-397fd26115ec)
 
 
-3. MOTD
+3. Плейбук, который изменяет приветствие (motd)
 
 ```
 - name: change_motd
