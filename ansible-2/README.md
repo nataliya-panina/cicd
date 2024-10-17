@@ -105,6 +105,27 @@ become_method = sudo
 
 ## Решение
 
+```
+---
+- name: Hello from cloud
+  hosts: yc
+  tasks:
+  - name: disable default motd
+    file:
+      path: /etc/update-motd.d/
+      state: directory
+      recurse: yes
+      mode: 644
+
+  - name: generate new motd
+    copy:
+      content: "\n Hello from {{ ansible_hostname }} \n
+               \n my IP address is {{ ansible_host }} \n
+               \n Have a nice day! \n " 
+      dest: /etc/motd
+```
+
+![image](https://github.com/user-attachments/assets/f92461dc-9baa-461f-9bdb-8d7425fa5c45)
 
 
 ## Задание 3
