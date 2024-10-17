@@ -150,3 +150,6 @@ become_method = sudo
 ## Решение
 
 
+
+![image](https://github.com/user-attachments/assets/d1f412c1-2baa-4114-97ce-2bf6a5d92993)
+
