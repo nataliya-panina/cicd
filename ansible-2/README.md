@@ -27,6 +27,8 @@ become_method = sudo
 ```
 
 1. Плейбук, который создаёт директорию в /tmp и распаковывает туда скачанный архивный файл
+Сначала нужно создать каталог /tmp/kafka, затем, используя модуль ansible.duiltin.unarchive, сразу распаковать файл в процессе скачивания.
+
 ```
 ---
 - name: download and unarchive kafka
@@ -83,7 +85,7 @@ become_method = sudo
 - name: change_motd
   hosts: yc
   tasks:
-  - name: disable default motd
+  - name: disable default motd 
     file:
       path: /etc/update-motd.d/
       state: directory
