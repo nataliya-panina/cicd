@@ -35,7 +35,10 @@ sudo apt install jenkins -y
 
 ```
 https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
-![image](https://github.com/user-attachments/assets/66ddfbda-9241-48c4-852c-d53c1ba5b88c)
+![image](https://github.com/user-attachments/assets/500cc0c4-3efe-464c-857c-0c12688934b2)
+![image](https://github.com/user-attachments/assets/7a940722-4f10-4782-9eef-141cacf7b2a6)
+Создаю новый item: netology_homework1 тип: freestyle
+
 
 ## Задание 2
 
