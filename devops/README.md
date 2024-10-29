@@ -11,6 +11,31 @@
 
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
 ## Решение
+Установка Java
+```
+sudo apt update
+sudo apt install default-jre -y
+```  
+Проверка версии java:
+```
+java -version
+
+openjdk version "11.0.24" 2024-07-16  
+OpenJDK Runtime Environment (build 11.0.24+8-post-Ubuntu-1ubuntu322.04)  
+OpenJDK 64-Bit Server VM (build 11.0.24+8-post-Ubuntu-1ubuntu322.04, mixed mode, sharing)  
+```
+
+Установка Jenkins
+```
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install jenkins -y
+
+```
+https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
+![image](https://github.com/user-attachments/assets/66ddfbda-9241-48c4-852c-d53c1ba5b88c)
 
 ## Задание 2
 
