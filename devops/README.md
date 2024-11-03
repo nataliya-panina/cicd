@@ -60,10 +60,27 @@ echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 ```
+
 ```
 docker run -d -p 8081:8081 -p 8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
 ```
+```
+sudo nano /etc/hosts:
+127.0.0.1 ubuntu-bionic
+```
 
+
+![image](https://github.com/user-attachments/assets/28aaad6a-6d07-44ed-8767-f9e1e11e3005)
+```
+sudo systemctl restart docker
+sudo systemctl status docker
+```
+
+
+![image](https://github.com/user-attachments/assets/fd127953-0e53-42ca-99ae-9b1f5a7cbbc2)
+
+
+![image](https://github.com/user-attachments/assets/35487338-569b-4a1e-a5ab-5ce523a6e769)
 
 ---
 ## Задание 2
