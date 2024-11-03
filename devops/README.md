@@ -56,6 +56,14 @@ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 ```
 
+```
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+```
+```
+docker run -d -p 8081:8081 -p 8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
+```
+
 
 ---
 ## Задание 2
