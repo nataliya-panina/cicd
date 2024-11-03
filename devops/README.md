@@ -38,8 +38,26 @@ https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 ![image](https://github.com/user-attachments/assets/500cc0c4-3efe-464c-857c-0c12688934b2)
 ![image](https://github.com/user-attachments/assets/7a940722-4f10-4782-9eef-141cacf7b2a6)
 Создаю новый item: netology_homework1 тип: freestyle
+![image](https://github.com/user-attachments/assets/5241b761-500f-4fe5-8d8a-274b7b9b505d)
+
+script shell:
+```
+/usr/local/go/bin/go test .
+docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
+docker login ubuntu-bionic:8082 -u admin -p admin && docker push ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER && docker logout
+```
+
+![image](https://github.com/user-attachments/assets/91071c86-2266-4f1e-8aa5-688cc5eeb435)
+
+Install Go
+```
+wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
+```
 
 
+---
 ## Задание 2
 
 Что нужно сделать:
