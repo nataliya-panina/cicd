@@ -55,19 +55,22 @@ wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 ```
-
+Чтобы jenkins мог работаьб с docker, нужно включить его в его группу:
 ```
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 ```
 
 ```
-docker run -d -p 8081:8081 -p 8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
-```
-```
 sudo nano /etc/hosts:
 127.0.0.1 ubuntu-bionic
 ```
+Запуск nexus в контейнере:
+```
+docker run -d -p 8081:8081 -p 8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
+```
+
+
 
 
 ![image](https://github.com/user-attachments/assets/28aaad6a-6d07-44ed-8767-f9e1e11e3005)
