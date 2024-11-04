@@ -69,6 +69,7 @@ sudo nano /etc/hosts:
 ```
 docker run -d -p 8081:8081 -p 8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
 ```
+![image](https://github.com/user-attachments/assets/f1ed3dc0-8101-41f9-bfc9-ee1a97332711)
 
 
 ![image](https://github.com/user-attachments/assets/28aaad6a-6d07-44ed-8767-f9e1e11e3005)
