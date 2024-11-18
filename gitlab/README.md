@@ -41,7 +41,8 @@ vagrant --version
 ```
 ![image](https://github.com/user-attachments/assets/bfe891f3-559b-41a4-bbe5-debe060bec81)
 
-
+- В Gitlab создаю новый пустой проект "my_project"  
+- 
 
 ---
 ## Задание 2
