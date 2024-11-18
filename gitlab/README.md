@@ -38,6 +38,9 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install vagrant
 vagrant --version
 ```
+![image](https://github.com/user-attachments/assets/bfe891f3-559b-41a4-bbe5-debe060bec81)
+
+
 
 ---
 ## Задание 2
@@ -51,8 +54,8 @@ vagrant --version
 
     файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
     скриншоты с успешно собранными сборками.
-
-Дополнительные задания* (со звёздочкой)
+----
+# Дополнительные задания* (со звёздочкой)
 
 Их выполнение необязательное и не влияет на получение зачёта по домашнему заданию. Можете их решить, если хотите лучше разобраться в материале.
 ## Задание 3*
