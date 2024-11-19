@@ -54,7 +54,7 @@ vagrant --version
 git remote add my_gitlab http://89.169.151.188/root/my_project.git
 git push my_gitlab
 ```
-Запуск раннера в режиме docker:
+Регистрация раннера:
 ```
 moi@ubu:~/gitlab/git_clone$    docker run -ti --rm --name gitlab-runner \
      --network host \
@@ -92,6 +92,20 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
  
 Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"
 ```
+В файле конфигурации /srv/gitlab-runner/config.toml вншу изменения для volume:
+```
+volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
+```
+Запуск раннера в контейнере:
+```
+docker run -d --name gitlab-runner --restart always \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest
+418d30632e211fc2dfbe922ef2468d7793e3915abdd39c54b472a60b22e282c5
+```
+
 ![image](https://github.com/user-attachments/assets/4a90c26f-a117-421a-9ce7-9c0f20710454)
 
 ---
@@ -106,6 +120,15 @@ Configuration (with the authentication token) was saved in "/etc/gitlab-runner/c
 
     файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
     скриншоты с успешно собранными сборками.
+---
+## Решение
+
+```
+nano .gitlab-ci.yml
+
+```
+
+
 ----
 # Дополнительные задания* (со звёздочкой)
 
