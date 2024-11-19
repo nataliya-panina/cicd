@@ -54,6 +54,7 @@ vagrant --version
 git remote add my_gitlab http://89.169.151.188/root/my_project.git
 git push my_gitlab
 ```
+Запуск раннера в режиме docker:
 ```
 moi@ubu:~/gitlab/git_clone$    docker run -ti --rm --name gitlab-runner \
      --network host \
@@ -91,6 +92,8 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
  
 Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"
 ```
+![image](https://github.com/user-attachments/assets/e3e0cd8a-400e-4e95-bc80-16798767724a)
+
 ---
 ## Задание 2
 
