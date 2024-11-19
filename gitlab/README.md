@@ -92,7 +92,7 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
  
 Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"
 ```
-В файле конфигурации /srv/gitlab-runner/config.toml вншу изменения для volume:
+В файле конфигурации /srv/gitlab-runner/config.toml вношу изменения для volume:
 ```
 volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
 ```
@@ -105,6 +105,7 @@ docker run -d --name gitlab-runner --restart always \
      gitlab/gitlab-runner:latest
 418d30632e211fc2dfbe922ef2468d7793e3915abdd39c54b472a60b22e282c5
 ```
+Раннер на сервере:
 
 ![image](https://github.com/user-attachments/assets/4a90c26f-a117-421a-9ce7-9c0f20710454)
 
