@@ -126,9 +126,28 @@ docker run -d --name gitlab-runner --restart always \
 
 ```
 nano .gitlab-ci.yml
+```
+```
+stages:
+  - test
+  - build
 
+test:
+  stage: test
+  image: golang:1.17
+  script: 
+   - go test .
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
 ```
 
+![image](https://github.com/user-attachments/assets/f569b498-7bf4-4bf2-a19c-13af91b5f638)
+![image](https://github.com/user-attachments/assets/48af90fc-8907-4835-a4c1-ad485b039cd8)
+![image](https://github.com/user-attachments/assets/6fceca66-0aae-4c4c-9845-8b18b75d0f6a)
 
 ----
 # Дополнительные задания* (со звёздочкой)
