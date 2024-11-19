@@ -27,12 +27,17 @@
 ---
 ## Решение
 ```
+git clone https://github.com/netology-code/sdvps-materials.git
+```
+Установка Vitrualbox:
+```
 echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee -a /etc/apt/sources.list
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt update
 sudo apt install virtualbox -y
 ```
+Установка Vagrant:
 ```
 wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
@@ -41,8 +46,14 @@ vagrant --version
 ```
 ![image](https://github.com/user-attachments/assets/bfe891f3-559b-41a4-bbe5-debe060bec81)
 
+  Работа с Gitlab:  
 - В Gitlab создаю новый пустой проект "my_project"  
-- 
+- Добавляю этот репозиторий в список удаленных репозиториев и заливаю в него клон:
+  
+```
+git remote add my_gitlab http://89.169.151.188/root/my_project.git
+git push my_gitlab
+```
 
 ---
 ## Задание 2
