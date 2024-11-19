@@ -54,7 +54,43 @@ vagrant --version
 git remote add my_gitlab http://89.169.151.188/root/my_project.git
 git push my_gitlab
 ```
+```
+moi@ubu:~/gitlab/git_clone$    docker run -ti --rm --name gitlab-runner \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest register
+Unable to find image 'gitlab/gitlab-runner:latest' locally
+latest: Pulling from gitlab/gitlab-runner
+d9802f032d67: Pull complete 
+5e97f4029c0b: Pull complete 
+d55be237d1a8: Pull complete 
+Digest: sha256:d7776fd6b38f5d985832a6fde36062fb74ff38f5000d25d7843a2e3486b6d277
+Status: Downloaded newer image for gitlab/gitlab-runner:latest
+Runtime platform                                    arch=amd64 os=linux pid=7 revision=12030cf4 version=17.5.3
+Running in system-mode.                            
+                                                   
+Created missing unique system ID                    system_id=r_y9xujOZtiCKr
+Enter the GitLab instance URL (for example, https://gitlab.com/):
+http://51.250.15.253/
+Enter the registration token:
+GR1348941_6JyPvw6x4ruHucs_gFu
+Enter a description for the runner:
+[ubu]:               
+Enter tags for the runner (comma-separated):
 
+Enter optional maintenance note for the runner:
+
+WARNING: Support for registration tokens and runner parameters in the 'register' command has been deprecated in GitLab Runner 15.6 and will be replaced with support for authentication tokens. For more information, see https://docs.gitlab.com/ee/ci/runners/new_creation_workflow 
+Registering runner... succeeded                     runner=GR1348941_6JyPvw6
+Enter an executor: ssh, docker, kubernetes, docker-autoscaler, instance, custom, shell, parallels, virtualbox, docker-windows, docker+machine:
+docker
+Enter the default Docker image (for example, ruby:2.7):
+golang:1.20
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+ 
+Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"
+```
 ---
 ## Задание 2
 
