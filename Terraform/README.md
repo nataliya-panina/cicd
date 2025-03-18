@@ -127,11 +127,12 @@ resource "docker_image" "wordpress" {
     keep_locally = true
 }
 ```
+## Команды terraform
 ```hcl
-terraform validate
-terraform plan
-terraform apply
-terraform destroy
-terraform console
+terraform validate # проверка кода
+terraform plan # план структуры
+terraform apply # применение описанной структуры
+terraform destroy # удаление всей созданной структуры
+terraform console # терминал для тренировок
 ```
 
