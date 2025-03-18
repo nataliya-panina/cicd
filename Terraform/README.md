@@ -65,3 +65,51 @@
 Перечислите основные функции, которые могут использоваться в Terraform.
 
 ## Решение
+
+---
+## Установка nginx и wordpress локально в контейнерах
+
+
+providers.tf
+```hcl
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.0.2"
+    }
+  }
+}
+```
+
+variables.tf
+```hcl
+variable "containers" {
+  type=map(object({
+    name=string
+    image=string
+    ports=object({
+      external=number
+      internal=number
+    })
+  }))
+default={
+  nginx={
+    name="reverse-proxy-nginx"
+    image="nginx:1.21.1"
+    ports={
+      internal=80
+      external=1080
+    }
+  }
+  wordpress={
+    name="web-wordpress"
+    image="wordpress:latest"
+    ports={
+      internal=80
+      external=2080
+    }
+  }
+}
+}
+```
