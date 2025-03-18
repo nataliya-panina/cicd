@@ -116,10 +116,10 @@ default={
 }
 ```
 ## main.tf
-  - 
+  - это инструкция для создания ресурсов, имена указаны в виде переменных (var.containers.nginx.image), которые были ранее описаны в файле variables.tf
 ```hcl
 resource "docker_image" "nginx" {
-    name= var.containers.nginx.image
+    name = var.containers.nginx.image
     keep_locally = true
 }
 resource "docker_image" "wordpress" {
@@ -127,3 +127,11 @@ resource "docker_image" "wordpress" {
     keep_locally = true
 }
 ```
+```hcl
+terraform validate
+terraform plan
+terraform apply
+terraform destroy
+terraform console
+```
+
