@@ -135,4 +135,7 @@ terraform apply # применение описанной структуры
 terraform destroy # удаление всей созданной структуры
 terraform console # терминал для тренировок
 ```
+![image](https://github.com/user-attachments/assets/cc558432-ded2-4b0b-876b-2603f7af66c0)
+![image](https://github.com/user-attachments/assets/4c755931-c709-40cf-a851-10d7917d1143)
+
 
