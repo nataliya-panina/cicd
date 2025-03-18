@@ -71,7 +71,7 @@
 
 
 ## providers.tf
-  - в этом файле описываются провайдеры, с которыми будет работать terraform. В этом случае запускаются контейнеры docker, поэтому в качастве провайдера описываем docker.
+  - в этом файле описываются провайдеры, с которыми будет работать terraform. В этом случае запускаются контейнеры docker, поэтому в качестве провайдера описываем docker.
 ```hcl
 terraform {
   required_providers {
@@ -141,3 +141,5 @@ terraform console # терминал для тренировок
 ![image](https://github.com/user-attachments/assets/4c755931-c709-40cf-a851-10d7917d1143)
 ![image](https://github.com/user-attachments/assets/7b980b77-51a9-4ef1-bc6c-22d06bed0657)
 ![image](https://github.com/user-attachments/assets/919789bb-24be-40d9-a86e-48914bf41123)
+## backend
+Файл terraform.tfstate нужно хранить в надёжном месте, например, в S3, в ![ Yandex cloud ](https://console.yandex.cloud/folders/b1ghpsbumf7efm6d0s33/storage/buckets).
