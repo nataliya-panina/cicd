@@ -67,10 +67,11 @@
 ## Решение
 
 ---
-## Установка nginx и wordpress локально в контейнерах
+# Установка nginx и wordpress локально в контейнерах
 
 
-providers.tf
+## providers.tf
+  - в этом файле описываются провайдеры, с которыми будет работать terraform. В этом случае запускаются контейнеры docker, поэтому в качастве провайдера описываем docker.
 ```hcl
 terraform {
   required_providers {
@@ -82,7 +83,8 @@ terraform {
 }
 ```
 
-variables.tf
+## variables.tf
+  - в качестве переменной сначала описывается её структура (объект), который включает в себя наименование (строка), образ (строка), и порты (объект), состоящий из внешнего и внутреннего портов (числа). Блок "default" включает в себя 2 контейнера - nginx и wordpress, каждый со своими параметрами.
 ```hcl
 variable "containers" {
   type=map(object({
@@ -111,5 +113,17 @@ default={
     }
   }
 }
+}
+```
+## main.tf
+  - 
+```hcl
+resource "docker_image" "nginx" {
+    name= var.containers.nginx.image
+    keep_locally = true
+}
+resource "docker_image" "wordpress" {
+    name = var.containers.wordpress.image
+    keep_locally = true
 }
 ```
