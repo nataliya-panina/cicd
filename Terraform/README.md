@@ -142,4 +142,4 @@ terraform console # терминал для тренировок
 ![image](https://github.com/user-attachments/assets/7b980b77-51a9-4ef1-bc6c-22d06bed0657)
 ![image](https://github.com/user-attachments/assets/919789bb-24be-40d9-a86e-48914bf41123)
 ## backend
-Файл terraform.tfstate нужно хранить в надёжном месте, например, в S3, в [ Yandex cloud ](https://console.yandex.cloud/folders/b1ghpsbumf7efm6d0s33/storage/buckets).
+Файл terraform.tfstate нужно хранить в надёжном месте, например, в S3, в [ Yandex cloud ](https://console.yandex.cloud/folders/b1ghpsbumf7efm6d0s33/storage/buckets). https://yandex.cloud/ru/docs/storage/quickstart?from=int-console-empty-state
